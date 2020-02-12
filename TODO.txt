@@ -1,0 +1,34 @@
+ECEC-355 Project 1 TODO List 2/9/2020
+Parser.c
+-ln 160: add REGEX or otherwise to get immediate address ‘60(x4)’ from input assembly for ld cmd
+-ln 197: add REGEX or otherwise to get imm addresses ‘60(x4)’ from input assembly for sd cmd
+-ln 214: write SB parser
+-ln 218: write UJ parser
+
+Core.c Core.h
+-Make Register File
+---Add Register file declaration in Core.h
+---Initalize in Core.c
+--do some 
+
+-Make Data Memory
+---Add data memory object to Core.h
+---Initalize in Core.c
+
+-Functions to simulate ALU, Control, Mux (Based on the diagram)
+---Make sim function and define in Core.h
+---Run instructions in Core.c
+
+Extra Credit
+-Make Abhi write all the provided C code into Risc-V
+-Write the risc-v to a txt file
+-Send the txt file into the fully working, finished, and tested simulator
+
+Report
+-How do you complete the Core structure? 
+ Can you explain in pseudocode?
+-How do you test the matrix operation program? 
+ Can you print out and explain the final layout of data memory?
+
+
+
