@@ -160,12 +160,15 @@ void parseIType(char *opr, Instruction *instr){
         // TODO: Add specialized regex 
         // to deal with ld addressing types
         // e.g. ld x13, 48(x1)
-        reg = strtok(NULL, ", ");
-        reg[strlen(reg)-1] = '\0';  //reg = n(a)
-        
-        char a = 'idk';             //= a where n(a)
-        rs_1 = regIndex(a);         
-        immediate = 0;              //= n where n(a)
+	optcode = 3;
+	funct3 = 3;
+	    
+        reg = strtok(NULL, ", ")
+        rs_1 = regIndex(reg);   
+	
+	reg = strtok(NULL, ", ")
+	reg[strlen(reg)-1] = '\0';  //reg = n(a)
+        immediate = regIndex(reg);              //= n where n(a)
     } else {
         reg = strtok(NULL, ", ");
         rs_1 = regIndex(reg);
